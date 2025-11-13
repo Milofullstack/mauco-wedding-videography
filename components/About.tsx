@@ -8,7 +8,7 @@ export default function About(){
           <div className="w-full h-[80dvh] md:h-dvh pb-12 md:w-1/2 flex justify-center items-center">
             <Image
               src="/images/mauco1.jpg"
-              alt="personal photo"
+              alt="personal photor"
               fill
               sizes="100vw"
               className="object-cover w-full h-full object-top shadow-2xl"
