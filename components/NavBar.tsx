@@ -53,7 +53,7 @@ export default function Navbar() {
           <div className="flex items-center pl-6 md:pl-8 lg:pl-16">
             <Link href="/" className="block">
               <Image
-                src={showLightLogo ? "/images/logoW.png" : "/images/logoB.png"}
+                src={showLightLogo ? "/images/logoW.png" : "/images/LogoB.png"}
                 alt="Mauco Riqueiro"
                 width={105}
                 height={85}

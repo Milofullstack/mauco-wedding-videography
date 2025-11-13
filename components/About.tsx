@@ -7,7 +7,7 @@ export default function About(){
         <div className="w-full h-full flex flex-col md:flex-row items-start justify-center gap-4 xl:gap-0">
           <div className="w-full h-[80dvh] md:h-dvh pb-12 md:w-1/2 flex justify-center items-center">
             <Image
-              src="/images/mauco1.jpg"
+              src="/images/mauco1.JPG"
               alt="personal photo"
               width={0}
               height={0}
