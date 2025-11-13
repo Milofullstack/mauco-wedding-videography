@@ -54,7 +54,7 @@ export default function Navbar() {
             <Link href="/" className="block">
               <Image
                 src={showLightLogo ? "/images/logoW.png" : "/images/LogoB.png"}
-                alt="Mauco Riqueiro"
+                alt="Mauco Riquero"
                 width={105}
                 height={85}
                 className="block cursor-pointer min-w-[125px]"
