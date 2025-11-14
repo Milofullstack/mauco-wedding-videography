@@ -15,7 +15,7 @@ export default function Video(){
         </video>
         <div className="absolute inset-0 bg-black/40"></div>
       <div className="absolute inset-0 w-full lg:w-3/5 px-8 md:px-14 xl:pl-18 2xl:pl-12 flex flex-col items-center justify-center gap-10 text-shadow-lg text-[#cdab56] text-center">
-        <h2 className="text-xl md:text-5xl lg:text-6xl mb-8 [font-family:var(--font-playfair)] font-normal">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl mb-8 [font-family:var(--font-playfair)] font-normal">
          “Love Through <br />the Lens”
         </h2><p className="[font-family:var(--font-cormorant)] font-bold  text-pretty text-start text-sm md:text-2xl  xl:text-2xl text-white text-shadow-md">
                 <span className="[font-family:var(--font-playfair)]  text-pretty text-xl  xl:text-2xl text-gray-200  ">
