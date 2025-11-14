@@ -5,7 +5,7 @@ export default function VerticalContent() {
   const videoUrl2 = cloudVideo("Vertical2");
   return (
     <section className="w-full h-full xl:h-dvh bg-[#f9f4f2]">
-      <div className="w-full h-full flex flex-col-reverse px-8 md:px-16 lg:px-10 lg:flex-row-reverse  items-center justify-center gap-4 md:gap-0">
+      <div className="w-full h-full flex flex-col-reverse px-0 md:px-16 lg:px-10 lg:flex-row-reverse  items-center justify-center gap-4 md:gap-0">
         {/* video */}
         <div className="relative aspect-9/16 h-dvh ">
           <video

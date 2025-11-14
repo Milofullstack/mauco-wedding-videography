@@ -30,13 +30,11 @@ export default function Navbar() {
 
   return (
     <>
-
       {/* ========================================= */}
       {/* 🔥 NAVBAR MOBILE — SIEMPRE FIJO Y ESTABLE */}
       {/* ========================================= */}
       <header className="md:hidden fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
         <nav className="flex items-center justify-between px-6 py-4">
-
           {/* LOGO MOBILE */}
           <Link href="/">
             <Image
@@ -61,13 +59,22 @@ export default function Navbar() {
               viewBox="0 0 24 24"
             >
               {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2.5"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               )}
             </svg>
           </button>
-
         </nav>
 
         {/* MENÚ MOBILE */}
@@ -100,8 +107,6 @@ export default function Navbar() {
         )}
       </header>
 
-
-
       {/* ===================================================== */}
       {/* 🔥 NAVBAR DESKTOP — ANIMADO EXACTAMENTE COMO TENÍAS */}
       {/* ===================================================== */}
@@ -113,10 +118,17 @@ export default function Navbar() {
         />
 
         <header
-          className={`fixed top-0 left-0 w-full z-50 transition-transform duration-1000
-            ${showNavbar ? "translate-y-0" : "-translate-y-full"} hover:translate-y-0
-            ${isTransparent ? "bg-transparent" : "bg-white/90 backdrop-blur-sm shadow-sm"}
-          `}
+          className={`
+    fixed top-0 left-0 w-full z-50
+    md:transition-transform md:duration-1000
+    md:${showNavbar ? "translate-y-0" : "-translate-y-full"} 
+    md:hover:translate-y-0
+    ${
+      isTransparent
+        ? "bg-transparent"
+        : "bg-white/90 backdrop-blur-sm shadow-sm"
+    }
+  `}
         >
           <nav
             className={`flex items-center justify-between gap-6 border-b
@@ -127,7 +139,9 @@ export default function Navbar() {
             <div className="flex items-center pl-6 md:pl-8 lg:pl-16">
               <Link href="/" className="block">
                 <Image
-                  src={isTransparent ? "/images/logo-w.png" : "/images/logo-b.png"}
+                  src={
+                    isTransparent ? "/images/logo-w.png" : "/images/logo-b.png"
+                  }
                   alt="Mauco Riquero"
                   width={105}
                   height={85}
@@ -145,7 +159,10 @@ export default function Navbar() {
                 `}
               >
                 {links.map(({ href, label, external }) => (
-                  <li key={href} className="transition-transform duration-200 hover:scale-105">
+                  <li
+                    key={href}
+                    className="transition-transform duration-200 hover:scale-105"
+                  >
                     {external ? (
                       <a
                         href={href}
@@ -156,7 +173,10 @@ export default function Navbar() {
                         {label}
                       </a>
                     ) : (
-                      <Link href={href} className={`${linkColors} transition-colors`}>
+                      <Link
+                        href={href}
+                        className={`${linkColors} transition-colors`}
+                      >
                         {label}
                       </Link>
                     )}
@@ -167,7 +187,6 @@ export default function Navbar() {
           </nav>
         </header>
       </div>
-
     </>
   );
 }
