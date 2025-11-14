@@ -9,8 +9,7 @@ export default function About(){
             <Image
               src="/images/mauco1.jpg"
               alt="personal photor"
-              width={900}
-              height={1600}
+              fill
               sizes="100vw"
               className="object-cover w-full h-full object-top shadow-2xl"
             ></Image>
