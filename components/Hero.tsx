@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {cloudVideo} from "@/lib/cloudinary";
 
 export default function Hero() {

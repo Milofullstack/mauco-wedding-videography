@@ -2,10 +2,11 @@ import Image from "next/image"
 import { cloudImage } from "@/lib/cloudinary"
 
 export default function About(){
+  
     return(
     <section className="w-full h-full xl:h-dvh bg-white " id="about">
         <div className="w-full h-full flex flex-col md:flex-row items-start justify-center gap-4 xl:gap-0">
-          <div className="w-full h-[80dvh] md:h-dvh pb-12 md:w-1/2 flex justify-center items-center">
+          <div className="relative w-full h-[80dvh] md:h-dvh pb-12 md:w-1/2 flex justify-center items-center">
             <Image
               src="/images/mauco1.jpg"
               alt="personal photour"
