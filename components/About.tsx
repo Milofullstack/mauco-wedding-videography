@@ -1,20 +1,22 @@
-import Image from "next/image"
 import { cloudImage } from "@/lib/cloudinary"
+import Image from "next/image";
 
 export default function About(){
-  
+   const imageUrl = cloudImage("mauco1_yxxz5l")
     return(
     <section className="w-full h-full xl:h-dvh bg-white " id="about">
         <div className="w-full h-full flex flex-col md:flex-row items-start justify-center gap-4 xl:gap-0">
-          <div className="relative w-full h-[80dvh] md:h-dvh pb-12 md:w-1/2 flex justify-center items-center">
-            <Image
-              src="/images/mauco1.jpg"
-              alt="personal photour"
-              fill
-              sizes="100vw"
-              className="object-cover w-full h-full object-top shadow-2xl"
-            ></Image>
-          </div>
+<div className="relative w-full h-[80dvh] md:h-dvh pb-12 md:w-1/2 flex justify-center items-center">
+  <div className="relative w-full h-full">
+    <Image
+      src={imageUrl}
+      alt="Personal portrait"
+      fill
+      sizes="100vw"
+      className="object-cover object-top shadow-2xl"
+    />
+  </div>
+</div>
           <div className="w-full h-full md:h-dvh mx-auto px-8 xl:pr-36 py-12 md:w-1/2  flex flex-col gap-20 md:gap-10 justify-center items-start">
             <h2 className="[font-family:var(--font-playfair)] text-2xl md:text-3xl xl:text-4xl">
               About me

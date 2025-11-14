@@ -75,7 +75,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -98,7 +98,7 @@ export default function RootLayout({
             inLanguage: ["en", "es"], // 🔸 languages supported
           }),
         }}
-      />
+      /> */}
       <body
         className={`${playfair.variable} ${cormorant.variable} antialiased`}
       >
