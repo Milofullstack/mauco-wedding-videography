@@ -10,7 +10,7 @@ export default function About(){
   <div className="relative w-full h-full">
     <Image
       src={imageUrl}
-      alt="Personal portrait"
+      alt="Personal portraitera"
       fill
       sizes="100vw"
       className="object-cover object-top shadow-2xl"
