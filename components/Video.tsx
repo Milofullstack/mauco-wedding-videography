@@ -4,7 +4,7 @@ export default function Video(){
     const videoUrl = cloudVideo("Alfabia");
 
     return(
-        <section id="view" className="relative w-full h-dvh  bg-white flex flex-col items-center justify-center">
+        <section id="view" className="relative w-full h-svh overflow-hidden bg-white flex flex-col items-center justify-center">
         <video src={videoUrl}
         autoPlay
         muted
