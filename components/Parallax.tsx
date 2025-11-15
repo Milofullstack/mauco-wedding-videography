@@ -3,7 +3,7 @@
         export default function Parallax() {
           const videoUrl = cloudVideo("hero2_gk7fi9");
           return (
-            <section className="relative w-full h-dvh px-8 md:px-16 lg:px-24 bg-white flex flex-col items-center justify-center">
+            <section className="relative w-full h-svh px-8 md:px-16 lg:px-24 bg-white flex flex-col items-center justify-center overflow-hidden">
 
         <video src={videoUrl}
         autoPlay
@@ -19,4 +19,5 @@
          “Moments that last<br />Forever”
          </h2>
          </div>
-       </section>)}
+       </section>)
+       }
