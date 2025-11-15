@@ -7,7 +7,7 @@ export default function VerticalContent() {
     <section className="w-full h-full xl:h-dvh bg-[#f9f4f2]">
       <div className="w-full h-full flex flex-col-reverse px-8 md:px-16 lg:px-10 lg:flex-row-reverse  items-center justify-center gap-4 md:gap-0">
         {/* video */}
-        <div className="relative aspect-9/16 h-dvh ">
+        <div className="relative aspect-9/16 h-svh ">
           <video
             src={videoUrl1}
             autoPlay
@@ -54,7 +54,7 @@ export default function VerticalContent() {
             </button>
           </div>
         </div>
-        <div className="relative aspect-9/16 h-dvh hidden 2xl:block">
+        <div className="relative aspect-9/16 h-svh hidden 2xl:block">
           <video
             src={videoUrl2}
             autoPlay
