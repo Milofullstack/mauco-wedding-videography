@@ -3,57 +3,112 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useScrollDirection } from "@/hooks/useScrollNavbar";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  // Hook original (solo se usará en desktop)
   const { isOpen, setIsOpen, showNavbar, handleMouseEnterTop, isAtTop } =
     useScrollDirection();
 
-  const isTransparent = isAtTop && !isOpen;
-  const linkColors = isOpen
-    ? "text-black hover:text-gray-600"
-    : isTransparent
-    ? "text-white hover:text-gray-200"
-    : "text-black hover:text-gray-600";
+  // Detectar si es móvil
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Enlaces
+  useEffect(() => {
+    const update = () => setIsMobile(window.innerWidth < 768);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  // Siempre transparente en móvil
+  const mobileBackground = "bg-transparent";
+
+  // En desktop, el color de fondo original
+  const desktopBackground = isAtTop && !isOpen
+    ? "bg-transparent"
+    : "bg-white/90 backdrop-blur-sm shadow-sm";
+
+  // Logo siempre blanco en móvil
+  const logoSrc = isMobile
+    ? "/images/logo-w.png"
+    : isAtTop && !isOpen
+    ? "/images/logo-w.png"
+    : "/images/logo-b.png";
+
+  // Hamburguesa siempre blanca en móvil
+  const burgerColor = isMobile
+    ? "text-white"
+    : isAtTop && !isOpen
+    ? "text-white"
+    : "text-black";
+
+  // Links en navbar abierta en móvil → negros sobre fondo blanco
+  const linkColors = isOpen
+    ? "text-black"
+    : isMobile
+    ? "text-white"
+    : isAtTop && !isOpen
+    ? "text-white"
+    : "text-black";
+
+  // Lista de enlaces
   const links = [
     { href: "/", label: "Inicio", external: false },
     { href: "#about", label: "About me", external: false },
     { href: "#view", label: "View", external: false },
     { href: "#contact", label: "Contact", external: false },
     {
-      href: "https://www.instagram.com/mauweddingvideography/",
+      href: "https://www.instagram.com/maucoriquero?igsh=MXV4ZnZtZ3h4aXd5Zw%3D%3D&utm_source=qr",
       label: "Media",
       external: true,
     },
   ];
 
   return (
-    <>
-      {/* ========================================= */}
-      {/* 🔥 NAVBAR MOBILE — SIEMPRE FIJO Y ESTABLE */}
-      {/* ========================================= */}
-      <header className="md:hidden fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
-        <nav className="flex items-center justify-between px-6 py-4">
-          {/* LOGO MOBILE */}
-          <Link href="/">
+    <div>
+      {/* Área sensible superior SOLO en desktop */}
+      {!isMobile && (
+        <div
+          className="fixed top-0 left-0 w-full h-[30px] z-60"
+          onMouseEnter={handleMouseEnterTop}
+        />
+      )}
+
+      <header
+        className={`
+          fixed top-0 left-0 w-full z-50
+          ${isMobile ? "" : "transition-transform duration-1000"}
+          ${isMobile ? "" : showNavbar ? "translate-y-0" : "-translate-y-full"} 
+          hover:translate-y-0
+          ${isMobile ? mobileBackground : desktopBackground}
+        `}
+      >
+        <nav
+          className={`flex items-center justify-between gap-6 border-b
+            ${isMobile ? "border-transparent" : isAtTop ? "border-transparent" : "border-gray-300"}
+            transition-colors
+            px-4 py-2
+          `}
+        >
+          {/* === Logo === */}
+          <Link href="/" className="block">
             <Image
-              src="/images/logo-b.png"
-              alt="Mauco Logo"
-              width={105}
-              height={85}
-              className="cursor-pointer"
+              src={logoSrc}
+              alt="Mauco Riquero"
+              width={isMobile ? 100 : 125}
+              height={isMobile ? 60 : 85}
+              className="cursor-pointer md:ml-10"
             />
           </Link>
 
-          {/* BOTÓN HAMBURGUESA */}
+          {/* === Botón Hamburguesa === */}
           <button
-            className="focus:outline-none"
+            className="md:hidden focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Abrir menú"
           >
             <svg
-              className="w-6 h-6 text-black"
+              className={`w-7 h-7 ${burgerColor}`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -75,19 +130,29 @@ export default function Navbar() {
               )}
             </svg>
           </button>
-        </nav>
 
-        {/* MENÚ MOBILE */}
-        {isOpen && (
-          <ul className="flex flex-col items-center gap-8 bg-white py-8 text-lg">
+          {/* === Menú (drawer móvil + modo desktop) === */}
+          <ul
+            className={`[font-family:var(--font-cormorant)] font-normal text-2xl md:text-xl xl:text-2xl
+              flex flex-col md:flex-row items-center gap-10 md:gap-8 lg:gap-10 xl:gap-20
+              md:static absolute top-full left-0 w-full md:w-auto
+              ${isOpen ? "block" : "hidden md:flex"}
+              ${isOpen ? "bg-white" : "bg-transparent"}
+              px-10 py-10 md:p-10
+              transition-all duration-500 ease-in-out
+            `}
+          >
             {links.map(({ href, label, external }) => (
-              <li key={href}>
+              <li
+                key={href}
+                className="transition-transform duration-200 hover:scale-105"
+              >
                 {external ? (
                   <a
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-black hover:text-gray-600"
+                    className={`${linkColors}`}
                     onClick={() => setIsOpen(false)}
                   >
                     {label}
@@ -95,7 +160,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     href={href}
-                    className="text-black hover:text-gray-600"
+                    className={`${linkColors}`}
                     onClick={() => setIsOpen(false)}
                   >
                     {label}
@@ -104,89 +169,8 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-        )}
+        </nav>
       </header>
-
-      {/* ===================================================== */}
-      {/* 🔥 NAVBAR DESKTOP — ANIMADO EXACTAMENTE COMO TENÍAS */}
-      {/* ===================================================== */}
-      <div className="hidden md:block">
-        {/* Área sensible superior */}
-        <div
-          className="fixed top-0 left-0 w-full h-[30px] z-60"
-          onMouseEnter={handleMouseEnterTop}
-        />
-
-        <header
-          className={`
-    fixed top-0 left-0 w-full z-50
-    md:transition-transform md:duration-1000
-    md:${showNavbar ? "translate-y-0" : "-translate-y-full"} 
-    md:hover:translate-y-0
-    ${
-      isTransparent
-        ? "bg-transparent"
-        : "bg-white/90 backdrop-blur-sm shadow-sm"
-    }
-  `}
-        >
-          <nav
-            className={`flex items-center justify-between gap-6 border-b
-              ${isTransparent ? "border-transparent" : "border-gray-300"}
-              transition-colors`}
-          >
-            {/* LOGO DESKTOP */}
-            <div className="flex items-center pl-6 md:pl-8 lg:pl-16">
-              <Link href="/" className="block">
-                <Image
-                  src={
-                    isTransparent ? "/images/logo-w.png" : "/images/logo-b.png"
-                  }
-                  alt="Mauco Riquero"
-                  width={105}
-                  height={85}
-                  className="block cursor-pointer min-w-[125px]"
-                />
-              </Link>
-            </div>
-
-            {/* MENÚ DESKTOP */}
-            <div className="py-4 mx-8 md:mx-16 lg:mx-24">
-              <ul
-                className={`
-                  flex items-center [font-family:var(--font-playfair)] font-medium text-lg
-                  gap-10 md:gap-8 lg:gap-10 xl:gap-20
-                `}
-              >
-                {links.map(({ href, label, external }) => (
-                  <li
-                    key={href}
-                    className="transition-transform duration-200 hover:scale-105"
-                  >
-                    {external ? (
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${linkColors} transition-colors`}
-                      >
-                        {label}
-                      </a>
-                    ) : (
-                      <Link
-                        href={href}
-                        className={`${linkColors} transition-colors`}
-                      >
-                        {label}
-                      </Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </nav>
-        </header>
-      </div>
-    </>
+    </div>
   );
 }
