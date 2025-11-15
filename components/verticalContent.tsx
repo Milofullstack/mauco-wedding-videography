@@ -5,7 +5,7 @@ export default function VerticalContent() {
   const videoUrl2 = cloudVideo("Vertical2");
   return (
     <section className="w-full h-full xl:h-dvh bg-[#f9f4f2]">
-      <div className="w-full h-full flex flex-col-reverse px-0 md:px-16 lg:px-10 lg:flex-row-reverse  items-center justify-center gap-4 md:gap-0">
+      <div className="w-full h-full flex flex-col-reverse px-8 md:px-16 lg:px-10 lg:flex-row-reverse  items-center justify-center gap-4 md:gap-0">
         {/* video */}
         <div className="relative aspect-9/16 h-dvh ">
           <video
@@ -18,7 +18,7 @@ export default function VerticalContent() {
           ></video>
         </div>
         <div className="w-full h-full lg:h-dvh mx-auto lg:px-8 xl:px-10 py-12 xl:py-20 xl:w-2/3  flex flex-col gap-20 md:gap-30 lg:gap-10 justify-between items-center">
-          <h2 className="[font-family:var(--font-playfair)] text-[#cdab56] font-normal text-7xl md:text-6xl text-center">
+          <h2 className="[font-family:var(--font-cormorant)] text-[#cdab56] font-normal text-5xl md:text-6xl text-center">
             Media content
           </h2>
           <p className="[font-family:var(--font-cormorant)] font-light text-pretty text-2xl  md:text-2xl xl:text-2xl text-gray-700">
