@@ -21,7 +21,8 @@ export default function Navbar() {
   }, []);
 
   // Siempre transparente en móvil
-  const mobileBackground = "bg-transparent";
+  const mobileBackground = isOpen ? "bg-white" : "bg-transparent";
+
 
   // En desktop, el color de fondo original
   const desktopBackground = isAtTop && !isOpen
@@ -29,18 +30,14 @@ export default function Navbar() {
     : "bg-white/90 backdrop-blur-sm shadow-sm";
 
   // Logo siempre blanco en móvil
-  const logoSrc = isMobile
-    ? "/images/logo-w.png"
-    : isAtTop && !isOpen
-    ? "/images/logo-w.png"
-    : "/images/logo-b.png";
+  const logoSrc =  isMobile
+    ? (isAtTop && !isOpen ? "/images/logo-w.png" : "/images/logo-b.png")
+    : (isAtTop && !isOpen ? "/images/logo-w.png" : "/images/logo-b.png");
 
   // Hamburguesa siempre blanca en móvil
-  const burgerColor = isMobile
-    ? "text-white"
-    : isAtTop && !isOpen
-    ? "text-white"
-    : "text-black";
+  const burgerColor =   isMobile
+    ? (isAtTop && !isOpen ? "text-white" : "text-black")
+    : (isAtTop && !isOpen ? "text-white" : "text-black");
 
   // Links en navbar abierta en móvil → negros sobre fondo blanco
   const linkColors = isOpen
