@@ -4,7 +4,7 @@ export default function Hero() {
   const videoUrl = cloudVideo("Banner_Web_prliby");
 
   return (
-    <section className="w-full h-dvh px-8 md:px-16 lg:px-24 bg-white flex flex-col items-center justify-center">
+    <section className="w-full h-svh overflow-hidden md:h-dvh px-8 md:px-16 lg:px-24 bg-white flex flex-col items-center justify-center">
       <video
         src={videoUrl}
         autoPlay
