@@ -22,6 +22,7 @@ export default function VerticalContent() {
         <div className="w-full h-full lg:h-dvh  lg:px-8 xl:px-8 py-10 xl:py-8 xl:w-2/3  flex flex-col gap-10 md:gap-20 lg:gap-10 justify-around items-center">
           <h2 className="[font-family:var(--font-cormorant)] text-[#cdab56] font-normal text-5xl md:text-6xl text-center">
             Media content
+            
           </h2>
           <p className="[font-family:var(--font-cormorant)] font-light text-pretty text-xl md:text-2xl   xl:text-2xl text-gray-700">
 I offer dedicated <span className="font-bold">Media Content Packages</span> for couples who want their wedding day to be felt, not just remembered.
