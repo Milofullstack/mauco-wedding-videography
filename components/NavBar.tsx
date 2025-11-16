@@ -73,12 +73,10 @@ export default function Navbar() {
 
       <header
         className={`
-          fixed top-0 left-0 w-full z-50
-          ${isMobile ? "" : "transition-transform duration-1000"}
-          ${isMobile ? "" : showNavbar ? "translate-y-0" : "-translate-y-full"} 
-          hover:translate-y-0
-          ${isMobile ? mobileBackground : desktopBackground}
-        `}
+fixed top-0 left-0 w-full z-50
+${isMobile ? "" : "transition-transform duration-1000"}
+${isMobile ? "" : showNavbar ? "translate-y-0" : "-translate-y-full"} 
+${isMobile ? mobileBackground : desktopBackground}`}
       >
         <nav
           className={`flex items-center justify-between gap-6 border-b

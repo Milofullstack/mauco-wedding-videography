@@ -12,21 +12,32 @@ export function useScrollDirection() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  const currentScrollY = window.scrollY;
 
-      // visible al subir; oculto al bajar
-      if (currentScrollY > lastScrollY.current && currentScrollY > 30) {
-        setShowNavbar(false);
-      } else {
-        setShowNavbar(true);
-      }
+  // 1. Si estamos arriba → navbar visible siempre
+  if (currentScrollY < 60) {
+    setShowNavbar(true);
+    setIsAtTop(true);
+  } else {
+    setIsAtTop(false);
+  }
 
-      // actualizar el valor del último scroll
-      lastScrollY.current = currentScrollY;
+  // 2. Detectar dirección del scroll
+  const isScrollingDown = currentScrollY > lastScrollY.current;
+  const isScrollingUp = currentScrollY < lastScrollY.current;
 
-      // controlar si estamos arriba del todo
-      setIsAtTop(currentScrollY <= 10);
-    };
+  // 3. Si baja → ocultar
+  if (isScrollingDown && currentScrollY > 20) {
+    setShowNavbar(false);
+  }
+
+  // 4. Si sube → mostrar (sin micro-jumps)
+  if (isScrollingUp && lastScrollY.current - currentScrollY > 6) {
+    setShowNavbar(true);
+  }
+
+  lastScrollY.current = currentScrollY;
+};
 
     // inicializamos el estado
     handleScroll();

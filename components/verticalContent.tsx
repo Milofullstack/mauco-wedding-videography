@@ -1,13 +1,14 @@
 import { cloudVideo } from "@/lib/cloudinary";
+import Link from "next/link";
 
 export default function VerticalContent() {
   const videoUrl1 = cloudVideo("Vertical_Son_Berga");
-  const videoUrl2 = cloudVideo("Vertical2");
+  const videoUrl2 = cloudVideo("vertical2_ss8uxd");
   return (
     <section className="w-full h-full xl:h-dvh bg-[#f9f4f2]">
-      <div className="w-full h-full flex flex-col-reverse px-8 md:px-16 lg:px-10 lg:flex-row-reverse  items-center justify-center gap-4 md:gap-0">
+      <div className="w-full h-full flex flex-col-reverse px-8 md:px-16 lg:px-10 lg:flex-row-reverse  items-center justify-between gap-4 md:gap-0">
         {/* video */}
-        <div className="relative aspect-9/16 h-svh w-1/3">
+        <div className="relative aspect-9/16 h-svh ">
           <video
             src={videoUrl1}
             autoPlay
@@ -17,25 +18,27 @@ export default function VerticalContent() {
             controls
             controlsList="nodownload noremoteplayback"
             preload="metadata"
-            className="absolute inset-0 w-full h-full object-cover py-8"
+            className="absolute inset-0 w-full h-full object-contain py-8"
           ></video>
         </div>
-        <div className="w-full h-full lg:h-dvh  lg:px-8 xl:px-10 py-12 xl:py-20 xl:w-1/3  flex flex-col gap-20 md:gap-30 lg:gap-10 justify-between items-center">
+        <div className="w-full h-full lg:h-dvh  lg:px-8 xl:px-8 py-10 xl:py-8 xl:w-2/3  flex flex-col gap-20 md:gap-30 lg:gap-10 justify-between items-center">
           <h2 className="[font-family:var(--font-cormorant)] text-[#cdab56] font-normal text-5xl md:text-6xl text-center">
             Media content
           </h2>
-          <p className="[font-family:var(--font-cormorant)] font-light text-pretty text-2xl  md:text-2xl xl:text-2xl text-gray-700">
-            In a world that lives on movement and emotion, vertical content
-            becomes the heartbeat of each celebration. We capture the essence of
-            the wedding in a cinematic, intimate format —perfect for sharing,
-            remembering, and feeling again. Every clip is designed to evoke, not
-            just to show. We blend rhythm, light, and storytelling to create
-            short films that breathe emotion and luxury in every frame. Because
-            your story deserves to be told beautifully —in every format, on
-            every screen.
+          <p className="[font-family:var(--font-cormorant)] font-light text-pretty text-xl md:text-2xl   xl:text-2xl text-gray-700">
+I offer dedicated <span className="font-bold">Media Content Packages</span> for couples who want their wedding day to be felt, not just remembered.
+I create vertical content made for Instagram, TikTok, and every place where your story continues.
+<br /><br />
+
+Whether you already have a photographer or not, these packages fit seamlessly into your wedding coverage. And while traditional edits take time, my vertical clips are delivered <span className="font-bold">within 24 hours</span> —ready to share the very next day.
+
+I work alongside your team or independently, capturing emotion, atmosphere, and the brief moments that become unforgettable.
+<br /><br />
+Because some memories can’t wait.
           </p>
           <div className="w-full flex justify-center xl:justify-center ">
-            <button
+          <Link href= "#contact">
+                      <button
               className="group cursor-pointer relative isolate overflow-hidden
              inline-flex items-center
              rounded-md border border-black px-6 py-2
@@ -44,7 +47,7 @@ export default function VerticalContent() {
              hover:scale-105 active:scale-95"
             >
               <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
-                Start Your Story
+                Media Content Packages
               </span>
               <span
                 aria-hidden
@@ -55,9 +58,10 @@ export default function VerticalContent() {
                group-hover:scale-y-100"
               />
             </button>
+          </Link>
           </div>
         </div>
-        {/* <div className="relative aspect-9/16 h-svh hidden 2xl:block">
+        <div className="relative aspect-9/16 h-svh hidden 2xl:block">
           <video
             src={videoUrl2}
             autoPlay
@@ -66,7 +70,7 @@ export default function VerticalContent() {
             playsInline
             className="absolute inset-0 w-full h-full object-contain py-8"
           ></video>
-        </div> */}
+        </div>
       </div>
     </section>
   );
