@@ -29,7 +29,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full min-h-[80dvh] bg-[#f9f4f2] flex flex-col lg:flex-row items-center gap-16 lg:gap-0 justify-center px-20 py-20"
+      className="w-full min-h-[80dvh] bg-[#f9f4f2] flex flex-col lg:flex-row items-center gap-16 lg:gap-0 justify-center px-8 py-20"
     >
      <div className="w-full lg:w-1/2 px-4 flex justify-center">
   <div className="w-full  px-4 flex flex-col items-center justify-center">
