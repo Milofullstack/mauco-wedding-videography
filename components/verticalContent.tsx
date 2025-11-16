@@ -15,9 +15,7 @@ export default function VerticalContent() {
             muted
             loop
             playsInline
-            controls
-            controlsList="nodownload noremoteplayback"
-            preload="metadata"
+         
             className="absolute inset-0 w-full h-full object-contain py-8"
           ></video>
         </div>
@@ -34,7 +32,7 @@ Whether you already have a photographer or not, these packages fit seamlessly in
 
 I work alongside your team or independently, capturing emotion, atmosphere, and the brief moments that become unforgettable.
 <br /><br />
-Because some memories can’t wait.
+<span className="font-medium">Because some memories can’t wait.</span>
           </p>
           <div className="w-full flex justify-center xl:justify-center ">
           <Link href= "#contact">
@@ -47,12 +45,12 @@ Because some memories can’t wait.
              hover:scale-105 active:scale-95"
             >
               <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
-                Media Content Packages
+                See my Packages
               </span>
               <span
                 aria-hidden
                 className="absolute inset-0 z-0
-               bg-[#8C8C6C]
+               bg-[#c6ac6f]
                origin-bottom scale-y-0 transform-gpu
                transition-transform duration-1000 ease-out
                group-hover:scale-y-100"

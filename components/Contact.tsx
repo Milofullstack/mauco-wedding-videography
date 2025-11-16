@@ -20,7 +20,7 @@ export default function Contact() {
     });
 
     if (res.ok) {
-      router.push("/thanks"); // 👈 redirige a tu propia página
+      router.push("/thanks"); 
     } else {
       setStatus("error");
     }
@@ -95,7 +95,7 @@ export default function Contact() {
 
   {/* === Texto emocional invitando al formulario === */}
   <p className="[font-family:var(--font-playfair)] text-gray-700 text-lg leading-relaxed">
-    If you'd like to explore these packages more deeply or see what fits your wedding best,  
+    If you´d like to explore these packages more deeply or see what fits your wedding best,  
     you can reach out through the form beside this section. I’m always happy to hear  
     about your plans and guide you through everything.
   </p>

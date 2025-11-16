@@ -2,11 +2,17 @@ import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Cormorant_Garamond } from "next/font/google";
+import { Great_Vibes } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
   variable: "--font-cormorant",
+});
+const greatvibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-greatvibes",
 });
 
 const playfair = Playfair_Display({
@@ -100,7 +106,7 @@ export default function RootLayout({
         }}
       /> */}
       <body
-        className={`${playfair.variable} ${cormorant.variable} antialiased`}
+        className={`${playfair.variable} ${cormorant.variable} ${greatvibes.variable} antialiased`}
       >
         {children}
       </body>
