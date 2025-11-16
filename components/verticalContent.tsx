@@ -6,7 +6,7 @@ export default function VerticalContent() {
   const videoUrl2 = cloudVideo("vertical2_ss8uxd");
   return (
     <section className="w-full h-full xl:h-dvh bg-[#f9f4f2]">
-      <div className="w-full h-full flex flex-col-reverse px-8 md:px-16 lg:px-10 lg:flex-row-reverse  items-center justify-between gap-4 md:gap-0">
+      <div className="w-full h-full flex flex-col-reverse px-8 md:px-16 lg:px-10 xl:flex-row-reverse  items-center justify-center gap-4 md:gap-0">
         {/* video */}
         <div className="relative aspect-9/16 h-svh ">
           <video
@@ -19,12 +19,12 @@ export default function VerticalContent() {
             className="absolute inset-0 w-full h-full object-contain py-8"
           ></video>
         </div>
-        <div className="w-full h-full lg:h-dvh  lg:px-8 xl:px-8 pt-0 xl:py-8 xl:w-2/3  flex flex-col gap-10 md:gap-20 lg:gap-10 2xl:gap-20 justify-center  items-center">
+        <div className="w-full h-full lg:h-dvh  lg:px-8 xl:px-2 2xl:px-6 pt-0 xl:py-8 xl:w-2/3  flex flex-col gap-10 md:gap-20 lg:gap-10  justify-evenly  items-center">
           <h2 className="[font-family:var(--font-cormorant)] py-10 text-[#cdab56] font-normal text-5xl md:text-6xl text-center">
             Media content
 
           </h2>
-          <p className="[font-family:var(--font-cormorant)] font-light text-pretty text-xl md:text-xl   xl:text-2xl 3xl:text-3xl text-gray-700">
+          <p className="[font-family:var(--font-cormorant)] font-light text-pretty text-xl md:text-3xl  xl:text-xl 2xl:text-lg text-gray-700">
 I offer dedicated <span className="font-bold">Media Content Packages</span> for couples who want their wedding day to be felt, not just remembered.
 I create vertical content made for Instagram, TikTok, and every place where your story continues.
 <br /><br />
