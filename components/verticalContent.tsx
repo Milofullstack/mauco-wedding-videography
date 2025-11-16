@@ -19,7 +19,7 @@ export default function VerticalContent() {
             className="absolute inset-0 w-full h-full object-contain py-8"
           ></video>
         </div>
-        <div className="w-full h-full lg:h-dvh  lg:px-8 xl:px-8 pt-0 xl:py-8 xl:w-2/3  flex flex-col gap-10 md:gap-20 lg:gap-10 justify-start  items-center">
+        <div className="w-full h-full lg:h-dvh  lg:px-8 xl:px-8 pt-0 xl:py-8 xl:w-2/3  flex flex-col gap-10 md:gap-20 lg:gap-10 2xl:gap-20 justify-center  items-center">
           <h2 className="[font-family:var(--font-cormorant)] py-10 text-[#cdab56] font-normal text-5xl md:text-6xl text-center">
             Media content
 
