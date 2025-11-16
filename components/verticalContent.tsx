@@ -7,17 +7,20 @@ export default function VerticalContent() {
     <section className="w-full h-full xl:h-dvh bg-[#f9f4f2]">
       <div className="w-full h-full flex flex-col-reverse px-8 md:px-16 lg:px-10 lg:flex-row-reverse  items-center justify-center gap-4 md:gap-0">
         {/* video */}
-        <div className="relative aspect-9/16 h-svh ">
+        <div className="relative aspect-9/16 h-svh w-1/3">
           <video
             src={videoUrl1}
             autoPlay
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-contain py-8"
+            controls
+            controlsList="nodownload noremoteplayback"
+            preload="metadata"
+            className="absolute inset-0 w-full h-full object-cover py-8"
           ></video>
         </div>
-        <div className="w-full h-full lg:h-dvh mx-auto lg:px-8 xl:px-10 py-12 xl:py-20 xl:w-2/3  flex flex-col gap-20 md:gap-30 lg:gap-10 justify-between items-center">
+        <div className="w-full h-full lg:h-dvh  lg:px-8 xl:px-10 py-12 xl:py-20 xl:w-1/3  flex flex-col gap-20 md:gap-30 lg:gap-10 justify-between items-center">
           <h2 className="[font-family:var(--font-cormorant)] text-[#cdab56] font-normal text-5xl md:text-6xl text-center">
             Media content
           </h2>
@@ -54,7 +57,7 @@ export default function VerticalContent() {
             </button>
           </div>
         </div>
-        <div className="relative aspect-9/16 h-svh hidden 2xl:block">
+        {/* <div className="relative aspect-9/16 h-svh hidden 2xl:block">
           <video
             src={videoUrl2}
             autoPlay
@@ -63,7 +66,7 @@ export default function VerticalContent() {
             playsInline
             className="absolute inset-0 w-full h-full object-contain py-8"
           ></video>
-        </div>
+        </div> */}
       </div>
     </section>
   );

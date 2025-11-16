@@ -10,7 +10,7 @@
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover">
+        className="absolute inset-0 w-full h-svh object-cover">
 
         </video>
          <div className="absolute inset-0 bg-black/40"></div>
