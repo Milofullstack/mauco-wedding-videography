@@ -31,8 +31,8 @@ export default function Navbar() {
 
   // Logo siempre blanco en móvil
   const logoSrc =  isMobile
-    ? (isAtTop && !isOpen ? "/images/logo-w.png" : "/images/logo-b.png")
-    : (isAtTop && !isOpen ? "/images/logo-w.png" : "/images/logo-b.png");
+    ? (isAtTop && !isOpen ? "/images/white-logo.png" : "/images/black-logo.png")
+    : (isAtTop && !isOpen ? "/images/white-logo.png" : "/images/black-logo.png");
 
   // Hamburguesa siempre blanca en móvil
   const burgerColor =   isMobile

@@ -23,20 +23,20 @@ export default function View() {
           “Love Through <br />
           the Lens”
         </h2>
-        <p className="[font-family:var(--font-cormorant)] font-bold  text-pretty text-start text-sm md:text-2xl   text-white text-shadow-md">
+        <p className="[font-family:var(--font-cormorant)] font-bold  text-pretty text-center text-sm md:text-2xl   text-white text-shadow-md">
           <span className="[font-family:var(--font-playfair)]  text-pretty text-sm md:text-2xl text-gray-200  ">
             Every love story has its own rhythm
           </span>
-          —a subtle dance of glances, gestures, and silences. Through the lens,
-          we dont just capture what is seen; we preserve what is felt. The
-          trembling of hands before a vow, the laughter between tears, the light
-          that wraps around two souls meant to find each other. Each frame
-          becomes a living memory, a fragment of forever.
+          — a subtle dance of movements, emotions, and quiet pauses. Through my
+          lens, I don’t just capture what is seen; I preserve what is felt. The
+          trembling of hands before a vow, the laughter between tears, the way
+          light rests on two souls meant to find each other. Each frame becomes
+          a living memory, a fragment of forever.
           <br />
           <br />
-          Our vision goes beyond photography —it’s about transforming emotions
-          into timeless art. We seek authenticity wrapped in elegance, beauty
-          born from truth, and the quiet moments that reveal everything. Because
+          My vision goes beyond photography —it’s about transforming emotions
+          into timeless art. I look for authenticity wrapped in elegance, beauty
+          born from truth, and the soft moments that reveal everything. Because
           love, when seen through the right eyes, becomes eternal.
         </p>
         <div>

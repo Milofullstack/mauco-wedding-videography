@@ -1,7 +1,7 @@
 import { cloudVideo } from "@/lib/cloudinary";
 import Link from "next/link";
 
-export default function VerticalContent() {
+export default function MediaContent() {
   const videoUrl1 = cloudVideo("Vertical_Son_Berga");
   const videoUrl2 = cloudVideo("vertical2_ss8uxd");
   return (
@@ -24,7 +24,7 @@ export default function VerticalContent() {
             Media content
 
           </h2>
-          <p className="[font-family:var(--font-cormorant)] font-light text-pretty text-xl md:text-3xl  xl:text-xl 2xl:text-lg text-gray-700">
+          <p className="[font-family:var(--font-cormorant)] font-light text-pretty text-xl md:text-3xl lg:text-2xl xl:text-2xl 2xl:text-lg text-gray-700">
 I offer dedicated <span className="font-bold">Media Content Packages</span> for couples who want their wedding day to be felt, not just remembered.
 I create vertical content made for Instagram, TikTok, and every place where your story continues.
 <br /><br />
@@ -33,7 +33,7 @@ Whether you already have a photographer or not, these packages fit seamlessly in
 
 I work alongside your team or independently, capturing emotion, atmosphere, and the brief moments that become unforgettable.
 <br /><br />
-<span className="font-medium">Because some memories can’t wait.</span>
+<span className="font-medium text-black">Because some memories can’t wait.</span>
           </p>
           <div className="w-full flex justify-center xl:justify-center ">
           <Link href= "#contact">

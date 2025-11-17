@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import View from "@/components/View";
-import VerticalContent from "@/components/verticalContent";
+import MediaContent from "@/components/MediaContent";
 import Contact from "@/components/Contact"
 import Video from "@/components/Video";
 import Footer from "@/components/Footer";
@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <View/>
-      <VerticalContent />
+      <MediaContent />
       <Video />
       <Contact />
       <Footer />

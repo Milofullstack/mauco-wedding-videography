@@ -25,16 +25,24 @@ export default function About() {
             About me
           </h2>
           <p className="[font-family:var(--font-cormorant)] font-light text-pretty text-center md:text-start text-xl xl:text-2xl text-gray-700">
-            I see weddings as living poems, woven from glances, gestures, and
-            the quiet rhythm of two souls becoming one story. Through a modern
-            documentary and editorial eye, I seek the beauty that unfolds
-            naturally, the warmth of a touch, the calm before a kiss, the way
-            light wraps around a moment just before it fades. My work is not all
-            about perfect poses, but about presence. About feeling rather than
-            showing. Each image is a fragment of emotion, an echo of the energy
-            that surrounds every couple, honest, elegant, and deeply human. I
-            believe the most timeless photographs are those that dont try too
-            hard, the ones that breathe, that move, that remind you how it all
+            I’m Mauco Riquero, a wedding videographer based in Mallorca. I’m
+            drawn to weddings because of the way love reveals itself in real,
+            unplanned moments —the emotional, the intimate, the beautifully
+            human. My style blends a modern documentary approach with an
+            editorial eye, always searching for authenticity wrapped in
+            elegance.
+            <br />
+            <br />
+            I see weddings as living poems —written in glances, gestures, and
+            the quiet rhythm of two souls becoming one story. I look for the
+            warmth of a touch, the calm before a kiss, the way light embraces a
+            moment just before it fades.
+            <br />
+            <br />
+            My work isn’t about perfect poses; it’s about presence. About
+            capturing what’s felt rather than what’s performed. Every image is a
+            fragment of emotion —honest, elegant, and deeply human. The most
+            timeless images are the ones that bring you back to how it truly
             felt.
           </p>
 

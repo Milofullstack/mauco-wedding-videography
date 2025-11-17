@@ -1,9 +1,4 @@
 @import "tailwindcss";
-@layer theme {
-  @custom-media --3xl (width >= 1800px);
-  @custom-media --4xl (width >= 2200px);
-  @custom-media --5xl (width >= 2560px);
-}
 
 
 /* --- Reset visual básico --- */
