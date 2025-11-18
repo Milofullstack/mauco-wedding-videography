@@ -25,15 +25,15 @@ export default function About() {
             About me
           </h2>
           <p className="[font-family:var(--font-cormorant)] font-light text-pretty text-center md:text-start text-xl xl:text-2xl text-gray-700">
-            I’m Mauco Riquero, a wedding videographer based in Mallorca. I’m
+            I’m Mauco Riquero, a <span className="font-semibold">wedding videographer</span> based in Mallorca. I’m
             drawn to weddings because of the way love reveals itself in real,
             unplanned moments —the emotional, the intimate, the beautifully
-            human. My style blends a modern documentary approach with an
-            editorial eye, always searching for authenticity wrapped in
+            human. My style blends a <span className="font-semibold">modern documentary approach</span> with an 
+            <span className="font-semibold"> editorial eye</span>, always searching for authenticity wrapped in
             elegance.
+            <br /><span className="font-semibold"></span>
             <br />
-            <br />
-            I see weddings as living poems —written in glances, gestures, and
+            I see <span className="font-semibold">weddings as living poems</span> —written in glances, gestures, and
             the quiet rhythm of two souls becoming one story. I look for the
             warmth of a touch, the calm before a kiss, the way light embraces a
             moment just before it fades.
